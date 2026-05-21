@@ -1,1 +1,37 @@
 /* This file is used in every page. Using javascript to link it automatically */
+/* Could actually use js to add everything...that way wouldn't be static */
+body {
+  background-color: #38234d;
+  margin: 0 10px 0 10px;
+  height: 100vh;
+  color: #ffffff;
+}
+
+/* The nav element with this class gets created with js */
+.main-nav {
+  width: 100vw;
+}
+
+/* The h1 element with this id gets created with js, displays on every page */
+#page-title {
+  margin: 0;
+  font-size: 3em;
+}
+
+/* Anything with this class has its children "flexed". */
+.flex-enabled {
+  display: flex;
+}
+
+/* Created via js to house the title and nav */
+.top-bar {
+  /* justify-content: space-around; */
+  align-items: baseline;
+}
+
+a {
+  text-decoration: none;
+  color: #f0f8ff;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 2em;
+}
