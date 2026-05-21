@@ -12,6 +12,23 @@ function create_link(link, custom_text) {
   return elem;
 }
 
+// WIP
+/**
+ * Returns a "card" container with content filled in so we can just call this many times
+ * @param {string} title The title of the project
+ * @param {string} img The relative path, including image filename
+ * @param {string} description Description of the project
+ * @param {string} link The URL of the project
+ * @param {string} link_text The text that is clickable
+ */
+function create_card(title, img, description, link) {
+  // Create container (article?), give it class name for card styling, and
+  // create and append other elements for info (h2,img,p,a), return container
+}
+
+// Filling in the portfolio page. WIP
+function fill_portfolio() {}
+
 // Function that calls immediately via IIFE so when loading page it happens
 // (Immediately Invoked Function Expression)
 (function main() {
@@ -24,9 +41,9 @@ function create_link(link, custom_text) {
   ];
   const current_page = window.location.pathname.split("/").pop();
 
-  // The div to put the menu in
-  const menu_div = document.createElement("div");
-  menu_div.className = "flex-enabled top-bar";
+  // The header menu
+  const menu_div = document.createElement("header");
+  menu_div.className = "flex-enabled header-bar";
   // Add the main css
   const link_elem = document.createElement("link");
   link_elem.setAttribute("rel", "stylesheet");

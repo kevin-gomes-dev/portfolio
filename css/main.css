@@ -9,7 +9,10 @@ body {
 
 /* The nav element with this class gets created with js */
 .main-nav {
-  width: 100vw;
+  gap: 1rem;
+  a {
+    font-size: 2em;
+  }
 }
 
 /* The h1 element with this id gets created with js, displays on every page */
@@ -24,8 +27,8 @@ body {
 }
 
 /* Created via js to house the title and nav */
-.top-bar {
-  /* justify-content: space-around; */
+.header-bar {
+  justify-content: space-between;
   align-items: baseline;
 }
 
@@ -33,5 +36,27 @@ a {
   text-decoration: none;
   color: #f0f8ff;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 2em;
+}
+
+/* A "card" expecting an h2 title, image, p tag(s) and <a>*/
+article {
+  h2 {
+    background-color: #5d2496;
+    margin: 0;
+    text-align: center;
+  }
+  img {
+    /* Some style to keep image small to fit in card */
+  }
+  a {
+    background-color: #5d2496;
+    width: stretch;
+    display: block;
+    text-align: center;
+  }
+  background-color: #8541c9;
+  width: 45vw;
+  max-height: fit-content;
+  margin: 1rem 1rem 1rem 0;
+  border: 3px solid #000000;
 }
