@@ -1,3 +1,4 @@
+<!-- TODO: Add better images of projects to show actual use -->
 <!doctype html>
 <html lang="en">
   <head>
@@ -6,34 +7,45 @@
     <title>Portfolio</title>
   </head>
   <body>
+    <div class="grid-enabled" id="projects">
+      <article>
+        <h2>Ecourier API</h2>
+        <img src="../img/port_ecourier.png" alt="ecourier" />
+        <p>A couple of classes and driver code to send and parse Ecourier's order-related requests.</p>
+        <p>Language(s): Python</p>
+        <a href="https://github.com/kevin-gomes-dev/ecourier_api" target="_blank">Github Repo</a>
+      </article>
+      <article>
+        <h2>Audio Tools</h2>
+        <img src="../img/port_audio_split.png" alt="audio split" />
+        <p>
+          A couple of scripts geared towards automated audio splitting and renaming based on silence and words spoken,
+          respectively.
+        </p>
+        <p>Language(s): Python</p>
+        <a href="https://github.com/kevin-gomes-dev/audio_splitter/tree/main" target="_blank">Github Repo</a>
+      </article>
+      <article>
+        <h2>Renpy Generator</h2>
+        <img src="../img/port_renpy.png" alt="renpy gen" />
+        <p>
+          Basic code that helps automate writinig RenPy code by using a formatted document containing narration and
+          character text. Special markers exist for features of RenPy such as scene changes, transitions and transforms,
+          and even raw python code for things like setting up variables and conditionals. As of now, branches are not
+          supported. Optional feature to use a function before every say statement to get voice file! An example
+          get_voice() can be found in the repo.
+        </p>
+        <p>Language(s): Python</p>
+        <a href="https://github.com/kevin-gomes-dev/renpy-gen" target="_blank">Github Repo</a>
+      </article>
+      <article>
+        <h2>Simple MySQL Database</h2>
+        <img src="../img/port_sample_db.png" alt="proj img" />
+        <p>A simple and working database in MySQL.</p>
+        <p>Language(s): Javascript, HTML</p>
+        <a href="https://github.com/kevin-gomes-dev/sample-database" target="_blank">Github Repo</a>
+      </article>
+    </div>
     <script src="../js/automate.js"></script>
-    <article>
-      <h2>Example Project</h2>
-      <img src="badimg" alt="proj img" />
-      <p>Some description</p>
-      <p>Language(s): Python</p>
-      <a href="#">Project link</a>
-    </article>
-    <article>
-      <h2>Example Project</h2>
-      <img src="badimg" alt="proj img" />
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      <p>Language(s): Python</p>
-      <a href="#">Project link</a>
-    </article>
-    <article>
-      <h2>Example Project</h2>
-      <img src="badimg" alt="proj img" />
-      <p>Some description</p>
-      <p>Language(s): Python</p>
-      <a href="#">Project link</a>
-    </article>
-    <article>
-      <h2>Example Project</h2>
-      <img src="badimg" alt="proj img" />
-      <p>Some description</p>
-      <p>Language(s): Python</p>
-      <a href="#">Project link</a>
-    </article>
   </body>
 </html>

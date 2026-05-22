@@ -21,13 +21,20 @@ function create_link(link, custom_text) {
  * @param {string} link The URL of the project
  * @param {string} link_text The text that is clickable
  */
-function create_card(title, img, description, link) {
+function create_card(title, img, description, link, link_text) {
   // Create container (article?), give it class name for card styling, and
   // create and append other elements for info (h2,img,p,a), return container
 }
 
-// Filling in the portfolio page. WIP
-function fill_portfolio() {}
+// Filling in the portfolio page with cards. WIP
+function fill_portfolio() {
+  // A list of lists, each inner list being a project title, image relative path, description, URL and clickable text
+  const projects = [];
+  for (let i = 0; i++; i < projects.length) {
+    let card = create_card(projects[i][0], projects[i][1], projects[i][2], projects[i][3], projects[i][4]);
+    document.body.append(card);
+  }
+}
 
 // Function that calls immediately via IIFE so when loading page it happens
 // (Immediately Invoked Function Expression)

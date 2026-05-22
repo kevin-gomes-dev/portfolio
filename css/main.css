@@ -5,6 +5,9 @@ body {
   margin: 0 10px 0 10px;
   height: 100vh;
   color: #ffffff;
+  p {
+    font-size: 24px;
+  }
 }
 
 /* The nav element with this class gets created with js */
@@ -46,6 +49,8 @@ article {
     text-align: center;
   }
   img {
+    margin: auto;
+    width: 100%;
     /* Some style to keep image small to fit in card */
   }
   a {
@@ -53,10 +58,45 @@ article {
     width: stretch;
     display: block;
     text-align: center;
+    font-weight: bolder;
+  }
+  p {
+    margin: 0.5rem 0.1rem 0.5rem 0.5rem;
   }
   background-color: #8541c9;
-  width: 45vw;
+  width: 40vw;
   max-height: fit-content;
   margin: 1rem 1rem 1rem 0;
   border: 3px solid #000000;
+}
+
+.grid-enabled {
+  display: grid;
+}
+
+/* Projects in the portfolio page */
+#projects {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+#interests {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* Contact boxes and labels */
+form {
+  grid-template-rows: repeat(3, 1fr);
+  gap: 0.5rem;
+  label {
+    font-size: 24px;
+  }
+  input,
+  textarea {
+    background-color: #190929;
+    color: white;
+  }
+  textarea {
+    height: 40vh;
+    width: 100vw;
+  }
 }

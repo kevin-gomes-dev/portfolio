@@ -3,9 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Contact</title>
   </head>
   <body>
+    <p>
+      If you wish to ask me anything or give feedback, feel free to use this form. It will take everything you give and
+      email me. Should I deem you worthy, you will receive the blessing that is my response. You're welcome. (Send
+      button doesn't work currently, do not click)
+    </p>
+    <!-- This form does nothing now, but we'd code something for action "submit" to
+     send a post request, sending their info to my email address I think -->
+    <div>
+      <form action="submit" method="post" class="grid-enabled">
+        <label for="name">Your name:</label>
+        <input type="text" name="name" id="name" required />
+        <label for="email">Your email:</label>
+        <input type="email" name="email" id="email" required />
+        <label for="content">Message:</label>
+        <textarea name="content" id="content"></textarea>
+        <input type="submit" value="Send" />
+      </form>
+    </div>
     <script src="../js/automate.js"></script>
   </body>
 </html>
