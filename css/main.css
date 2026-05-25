@@ -2,7 +2,7 @@
 /* Could actually use js to add everything...that way wouldn't be static */
 body {
   background-color: #38234d;
-  margin: 0 10px 0 10px;
+  margin: 0 0.5rem 0 0.5rem;
   height: 100vh;
   color: #ffffff;
   p {
@@ -10,12 +10,34 @@ body {
   }
 }
 
+/* Adjust for smaller screens */
+@media (width < 600px) {
+  #projects {
+    display: grid;
+    article {
+      width: 95vw;
+    }
+  }
+  #header-bar {
+    display: block;
+    text-align: center;
+  }
+  #main-nav {
+    display: grid;
+  }
+}
 /* The nav element with this class gets created with js */
-.main-nav {
+#main-nav {
   gap: 1rem;
   a {
     font-size: 2em;
   }
+}
+
+/* Created via js to house the title and nav */
+#header-bar {
+  justify-content: space-between;
+  align-items: baseline;
 }
 
 /* The h1 element with this id gets created with js, displays on every page */
@@ -29,12 +51,6 @@ body {
   display: flex;
 }
 
-/* Created via js to house the title and nav */
-.header-bar {
-  justify-content: space-between;
-  align-items: baseline;
-}
-
 a {
   text-decoration: none;
   color: #f0f8ff;
@@ -43,13 +59,18 @@ a {
 
 /* A "card" expecting an h2 title, image, p tag(s) and <a>*/
 article {
+  word-wrap: break-word;
+  background-color: #8541c9;
+  width: 40vw;
+  max-height: fit-content;
+  margin: 1rem 1rem 1rem 1rem;
+  border: 3px solid #000000;
   h2 {
     background-color: #5d2496;
     margin: 0;
     text-align: center;
   }
   img {
-    margin: auto;
     width: 100%;
     /* Some style to keep image small to fit in card */
   }
@@ -63,11 +84,6 @@ article {
   p {
     margin: 0.5rem 0.1rem 0.5rem 0.5rem;
   }
-  background-color: #8541c9;
-  width: 40vw;
-  max-height: fit-content;
-  margin: 1rem 1rem 1rem 0;
-  border: 3px solid #000000;
 }
 
 .grid-enabled {
@@ -76,7 +92,9 @@ article {
 
 /* Projects in the portfolio page */
 #projects {
-  grid-template-columns: repeat(2, 1fr);
+  /* grid-template-columns: repeat(2, 1fr); */
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 #interests {
@@ -94,9 +112,9 @@ form {
   textarea {
     background-color: #190929;
     color: white;
+    width: 98vw;
   }
   textarea {
     height: 40vh;
-    width: 100vw;
   }
 }

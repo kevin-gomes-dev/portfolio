@@ -50,7 +50,8 @@ function fill_portfolio() {
 
   // The header menu
   const menu_div = document.createElement("header");
-  menu_div.className = "flex-enabled header-bar";
+  menu_div.className = "flex-enabled";
+  menu_div.id = "header-bar";
   // Add the main css
   const link_elem = document.createElement("link");
   link_elem.setAttribute("rel", "stylesheet");
@@ -59,7 +60,8 @@ function fill_portfolio() {
 
   // Make main nav and put as 2nd element on page after the heading
   const main_nav = document.createElement("nav");
-  main_nav.className = "main-nav flex-enabled";
+  main_nav.className = "flex-enabled";
+  main_nav.id = "main-nav";
   const title_h1 = document.createElement("h1");
   title_h1.id = "page-title";
   menu_div.prepend(main_nav);
