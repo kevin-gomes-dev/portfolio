@@ -8,6 +8,18 @@ body {
   p {
     font-size: 24px;
   }
+  img {
+    width: 50vw;
+    align-items: center;
+  }
+}
+div {
+  width: 100vw;
+  align-items: center;
+  img {
+    display: block;
+    margin: auto;
+  }
 }
 
 /* Adjust for smaller screens */
