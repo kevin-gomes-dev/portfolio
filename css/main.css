@@ -13,6 +13,7 @@ body {
     align-items: center;
   }
 }
+
 div {
   width: 100vw;
   align-items: center;
@@ -20,14 +21,18 @@ div {
     display: block;
     margin: auto;
   }
+  text-align: center;
 }
 
 /* Adjust for smaller screens */
 @media (width < 600px) {
-  #projects {
-    display: grid;
+  #projects,
+  #interests {
+    display: block;
+    margin: auto;
     article {
-      width: 95vw;
+      margin: 1vh 3vw 0 3vw;
+      width: 90vw;
     }
   }
   #header-bar {
@@ -104,7 +109,6 @@ article {
 
 /* Projects in the portfolio page */
 #projects {
-  /* grid-template-columns: repeat(2, 1fr); */
   flex-direction: row;
   flex-wrap: wrap;
 }
@@ -115,18 +119,22 @@ article {
 
 /* Contact boxes and labels */
 form {
-  grid-template-rows: repeat(3, 1fr);
+  margin: 0;
+  width: 90vw;
+  margin: 1vh 2vw 1vh 2vw;
   gap: 0.5rem;
   label {
-    font-size: 24px;
+    font-size: 2rem;
   }
   input,
   textarea {
     background-color: #190929;
     color: white;
-    width: 98vw;
+    /* width: 90vw; */
+    font-size: 1.5rem;
   }
   textarea {
     height: 40vh;
+    font-size: 1.5rem;
   }
 }
