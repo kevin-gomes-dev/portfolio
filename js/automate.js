@@ -4,10 +4,11 @@
  * Create and return a link node.
  * @param {string} link The base file name of the HTML page
  * @param {string} custom_text The text to be able to click
+ * @param {string} dir The directory of the file
  */
 function create_link(link, custom_text) {
   const elem = document.createElement("a");
-  elem.href = `../html/${link}`;
+  elem.href = link;
   elem.text = custom_text;
   return elem;
 }
@@ -55,7 +56,7 @@ function fill_portfolio() {
   // Add the main css
   const link_elem = document.createElement("link");
   link_elem.setAttribute("rel", "stylesheet");
-  link_elem.setAttribute("href", "../css/main.css");
+  link_elem.setAttribute("href", "./css/main.css");
   document.head.append(link_elem);
 
   // Make main nav and put as 2nd element on page after the heading
@@ -72,7 +73,8 @@ function fill_portfolio() {
   for (let i = 0; i < 4; i++) {
     let page = pages[i][0];
     if (page !== current_page) {
-      main_nav.append(create_link(pages[i][0], pages[i][1]));
+      console.log(pages);
+      main_nav.append(create_link(pages[i][0], pages[i][1], pages[i][2]));
     } else {
       title_h1.textContent = pages[i][1];
     }
