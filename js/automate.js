@@ -69,11 +69,19 @@ function fill_portfolio() {
 
   // Create 3 elements, one for each link. Determine links via current page. Also use
   // this loop when doing something depending on what page you're on or are not on
+  // Have to handle home special since it is both / and /index.html
   for (let i = 0; i < 4; i++) {
     let page = pages[i][0];
+    // Horrible code but idk to handle the home page when it's just /, could be that or index
+    if (current_page === "") {
+      for (let j = 1; j < 4; j++) {
+        main_nav.append(create_link(pages[j][0], pages[j][1]));
+      }
+      title_h1.textContent = pages[0][1];
+      break;
+    }
     if (page !== current_page) {
-      console.log(pages);
-      main_nav.append(create_link(pages[i][0], pages[i][1], pages[i][2]));
+      main_nav.append(create_link(pages[i][0], pages[i][1]));
     } else {
       title_h1.textContent = pages[i][1];
     }
