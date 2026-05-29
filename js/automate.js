@@ -4,7 +4,6 @@
  * Create and return a link node.
  * @param {string} link The base file name of the HTML page
  * @param {string} custom_text The text to be able to click
- * @param {string} dir The directory of the file
  */
 function create_link(link, custom_text) {
   const elem = document.createElement("a");
